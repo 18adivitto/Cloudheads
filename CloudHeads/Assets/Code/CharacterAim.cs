@@ -10,6 +10,8 @@ public class CharacterAim : MonoBehaviour
 
     public GameObject explosion;
 
+    public static Transform player1LockPos;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,8 @@ public class CharacterAim : MonoBehaviour
         {
             //Debug.Log(hit.point);
             gizmoPoint = hit.point;
+
+           
         }
 
         if (Input.GetButton("shoot"))
@@ -37,6 +41,8 @@ public class CharacterAim : MonoBehaviour
         {
             debugColor = Color.red;
         }
+
+        
 
     }
 

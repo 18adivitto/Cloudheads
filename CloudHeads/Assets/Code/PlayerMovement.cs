@@ -61,12 +61,13 @@ public class PlayerMovement : MonoBehaviour
         {
             angle = -(Vector3.SignedAngle(Vector3.up, lookDirection, transform.position));
         }
+
         
         if (lookDirection.x < 0)
         {
             angle = -angle;
         }
 
-        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(new Vector3(0,0, angle)), Time.deltaTime * 15); //rotate
+        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(new Vector3(0,0, angle)), Time.deltaTime * 25); //rotate
     }
 }
