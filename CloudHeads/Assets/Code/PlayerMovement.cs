@@ -62,6 +62,6 @@ public class PlayerMovement : MonoBehaviour
             angle = -angle;
         }
 
-        transform.rotation = Quaternion.Euler(new Vector3(0,0, angle)); //rotate
+        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(new Vector3(0,0, angle)), Time.deltaTime * 15); //rotate
     }
 }
