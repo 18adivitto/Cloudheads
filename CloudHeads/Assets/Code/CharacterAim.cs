@@ -8,6 +8,8 @@ public class CharacterAim : MonoBehaviour
 
     Color debugColor;
 
+    public GameObject explosion;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,7 @@ public class CharacterAim : MonoBehaviour
         if (Input.GetButton("shoot"))
         {
             Debug.Log("bang!");
+            Instantiate(explosion, hit.point, Quaternion.identity);
             debugColor = Color.green;
         }
         else

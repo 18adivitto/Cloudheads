@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -32,6 +33,10 @@ public class PlayerMovement : MonoBehaviour
 
         PlayerLook();
 
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene("MainGame");
+        }
      
     }
 
