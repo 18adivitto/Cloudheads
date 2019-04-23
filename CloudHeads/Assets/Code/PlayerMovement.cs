@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
 
     float speed = 10;
 
-    Vector3 lookDirection;
+    public Vector3 lookDirection;
 
 
 
@@ -51,8 +51,12 @@ public class PlayerMovement : MonoBehaviour
             lookDirection.x = 0;
             lookDirection.y = 0;
         }
-        angle = -(Vector3.SignedAngle(Vector3.up, lookDirection, transform.position));
 
+        if (Mathf.Abs(lookDirection.x) > 0 || Mathf.Abs(lookDirection.y) > 0)
+        {
+            angle = -(Vector3.SignedAngle(Vector3.up, lookDirection, transform.position));
+        }
+        
         if (lookDirection.x < 0)
         {
             angle = -angle;
