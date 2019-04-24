@@ -66,7 +66,9 @@ public class PlayerMovement : MonoBehaviour
 
         if (lookDirection.x < 0)
         {
-            angle = -angle;
+            angle = (Vector3.SignedAngle(Vector3.up, lookDirection, transform.position));
+            lookDirection = Vector3.ClampMagnitude(lookDirection, 1);
+
         }
         
 

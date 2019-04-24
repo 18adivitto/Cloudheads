@@ -7,20 +7,20 @@ public class bulletTrail : MonoBehaviour
     Vector3 startpos;
     Vector3 endpos;
 
-    float radiusRange = .2f;
+    float radiusRange = .1f;
 
     public GameObject explosion;
     // Start is called before the first frame update
     void Start()
     {
-        startpos = transform.position;
+        transform.position = transform.position + new Vector3(Random.Range(-.3f, .3f), Random.Range(-.3f, .3f));
         endpos = CharacterAim.gizmoPoint;
     }
     // Update is called once per frame
     void Update()
     {
         
-        transform.position = Vector3.Lerp(transform.position, endpos, Time.deltaTime * 20);
+        transform.position = Vector3.Lerp(transform.position, endpos, Time.deltaTime * 30);
 
         //if ((transform.position == endpos))
         //{
