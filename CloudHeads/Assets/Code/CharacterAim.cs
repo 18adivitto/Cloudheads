@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class CharacterAim : MonoBehaviour
 {
-    Vector3 gizmoPoint;
+    public static Vector3 gizmoPoint;
 
     Color debugColor;
 
     public GameObject explosion;
+
+    public GameObject bulletTrail;
 
     public static Transform player1LockPos;
 
@@ -33,8 +35,8 @@ public class CharacterAim : MonoBehaviour
 
         if (Input.GetButton("shoot"))
         {
-            Debug.Log("bang!");
-            Instantiate(explosion, hit.point, Quaternion.identity);
+            //Debug.Log("bang!");
+            //Instantiate(explosion, hit.point, Quaternion.identity);
             debugColor = Color.green;
         }
         else
@@ -42,6 +44,10 @@ public class CharacterAim : MonoBehaviour
             debugColor = Color.red;
         }
 
+        if (Input.GetButtonDown("shoot"))
+        {
+            Instantiate(bulletTrail, transform.position, Quaternion.identity);
+        }
         
 
     }

@@ -722,6 +722,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 435762734495986378, guid: 36a4907829d35dd4ea67d5ec7f597c2d,
     type: 3}
+  bulletTrail: {fileID: 7915615785324573273, guid: 73c3aa882e955f5479caaa484a75aa86,
+    type: 3}
 --- !u!1 &731130856
 GameObject:
   m_ObjectHideFlags: 0
