@@ -50,7 +50,7 @@ public class PlayerMovement : MonoBehaviour
        
         lookDirection = new Vector3(Input.GetAxis("RightJoyStickX"), Input.GetAxis("RightJoyStickY"));
         lookDirection = Vector3.ClampMagnitude(lookDirection, 1);
-        
+
         if (Mathf.Round(lookDirection.x) == 0 && Mathf.Round(lookDirection.y) == 0)
         {
             lookDirection.x = 0;

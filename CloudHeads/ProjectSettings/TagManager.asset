@@ -38,6 +38,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Walls
+    uniqueID: 3336963767
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: EXPLOSITONS
+    uniqueID: 1694866517
     locked: 0
