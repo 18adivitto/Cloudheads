@@ -66,9 +66,17 @@ public class PlayerMovement : MonoBehaviour
 
         if (lookDirection.x < 0)
         {
+            Debug.Log("flipped" + Time.deltaTime);
+
             angle = (Vector3.SignedAngle(Vector3.up, lookDirection, transform.position));
             lookDirection = Vector3.ClampMagnitude(lookDirection, 1);
 
+        }
+        else if(lookDirection.x > 0)
+        {
+            Debug.Log("not flipped" + Time.deltaTime);
+            angle = -(Vector3.SignedAngle(Vector3.up, lookDirection, transform.position));
+            lookDirection = Vector3.ClampMagnitude(lookDirection, 1);
         }
         
 
