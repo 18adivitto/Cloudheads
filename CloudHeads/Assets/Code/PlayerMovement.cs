@@ -63,7 +63,6 @@ public class PlayerMovement : MonoBehaviour
             lookDirection = Vector3.ClampMagnitude(lookDirection, 1);
         }
 
-
         if (lookDirection.x < 0)
         {
             Debug.Log("flipped" + Time.deltaTime);
@@ -72,12 +71,13 @@ public class PlayerMovement : MonoBehaviour
             lookDirection = Vector3.ClampMagnitude(lookDirection, 1);
 
         }
-        else if(lookDirection.x > 0)
+        else if (lookDirection.x > 0)
         {
             Debug.Log("not flipped" + Time.deltaTime);
             angle = -(Vector3.SignedAngle(Vector3.up, lookDirection, transform.position));
             lookDirection = Vector3.ClampMagnitude(lookDirection, 1);
         }
+       
         
 
         transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(new Vector3(0, 0, angle)), Time.deltaTime * 30); //rotate
